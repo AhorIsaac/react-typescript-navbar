@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { links, social } from "./data";
-import logo from "./logo.svg";
+import logo from "./shidoon-light-logo.jpg";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState<boolean>(false);
@@ -23,7 +23,9 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" style={{ 
+            width: "160px", height: "50px"
+           }} />
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}
