@@ -4,7 +4,9 @@ import { FaBars } from "react-icons/fa";
 import { links, social } from "./data";
 import logo from "./shidoon-light-logo.jpg";
 
-const Navbar = () => {
+export interface INavbar {}
+
+const Navbar: React.FC<INavbar> = (): React.ReactElement => {
   const [showLinks, setShowLinks] = useState<boolean>(false);
   const linksContainerRef = useRef<any>(null);
   const linksRef = useRef<any>(null);
@@ -23,9 +25,14 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="logo" style={{ 
-            width: "160px", height: "50px"
-           }} />
+          <img
+            src={logo}
+            alt="logo"
+            style={{
+              width: "160px",
+              height: "50px",
+            }}
+          />
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}

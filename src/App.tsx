@@ -1,7 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-const App = () => {
+export interface IApp {}
+
+const App: React.FC<IApp> = (): React.ReactElement => {
   return (
     <>
       <Navbar />
